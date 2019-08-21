@@ -4,9 +4,17 @@ import java.util.*
 
 // Complete the minimumBribes function below.
 fun minimumBribes(q: Array<Int>) {
+    var numOfBribes = 0
+    var chaotic = false
 
     for(i in q.size - 1 downTo 0) {
-        if(q[i] - q[i-1] > 2)
+        if(q[i] < q[i-1]) {
+            if(q[i].minus(q[i-1]) <= 2) numOfBribes++
+            else {
+                chaotic = true
+                break
+            }
+        }
     }
 
 }

@@ -17,6 +17,8 @@ fun minimumBribes(q: Array<Int>) {
         }
     }
 
+    if(chaotic) println("")
+    else println(numOfBribes)
 }
 
 fun main() {

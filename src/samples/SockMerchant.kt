@@ -5,7 +5,7 @@ import kotlin.math.floor
 
 data class Pairs(val pair: Double = 0.0, val count : Double = 0.0)
 
-// Complete the sockMerchant function below.
+// Complete the sockMerchant function below. https://www.hackerrank.com/challenges/sock-merchant/problem
 fun sockMerchant(n: Int, ar: Array<Int>): Int {
     var socks = mutableMapOf<Int, Pairs>()
 

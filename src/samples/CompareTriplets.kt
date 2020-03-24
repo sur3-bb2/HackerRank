@@ -1,5 +1,6 @@
 package samples
 
+//https://www.hackerrank.com/challenges/compare-the-triplets/problem
 fun compareTriplets(a: Array<Int>, b: Array<Int>): Array<Int> {
     var sameValue = 0
 

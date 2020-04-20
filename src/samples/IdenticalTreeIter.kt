@@ -24,25 +24,25 @@ fun isSameIte(node1: Node?, node2: Node?) : Boolean {
 
     val queue = ArrayDeque<Node>()
 
-    queue.add(node1)
-    queue.add(node2)
+    queue.offer(node1)
+    queue.offer(node2)
 
     while(!queue.isEmpty()) {
-        val left = queue.removeFirst()
-        val right = queue.removeFirst()
+        val left = queue.poll()
+        val right = queue.poll()
 
         if(left ?.value != right?.value) return false
 
         if(left?.left != null && right?.left != null) {
-            queue.add(left?.left)
-            queue.add(right?.left)
+            queue.offer(left?.left)
+            queue.offer(right?.left)
         } else if(left?.left != null || right?.left != null) {
             return false
         }
 
         if(left?.right != null && right?.right != null) {
-            queue.add(left?.right)
-            queue.add(right?.right)
+            queue.offer(left?.right)
+            queue.offer(right?.right)
         } else if(left?.right != null || right?.right != null) {
             return false
         }

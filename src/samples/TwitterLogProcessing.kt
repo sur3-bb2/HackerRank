@@ -4,6 +4,7 @@ import java.io.File
 import java.net.URI
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import kotlin.random.Random
 
 data class Log(val dateTimeRaw: String, val parsedDateTime: LocalDateTime, val endpoint: String, val status: Int = 200) {
     companion object {
